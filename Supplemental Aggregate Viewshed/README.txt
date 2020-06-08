@@ -1,0 +1,1 @@
+The NoData value for the aggregate viewshed is 0

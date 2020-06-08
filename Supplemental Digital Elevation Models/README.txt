@@ -1,0 +1,1 @@
+The NoData value for both digital elevation models is -32768. All original floating point values except for NoData were multiplied by 100 and converted to integers to facilitate higher file compression with minimal loss in fidelity (no more than 1 cm). To restore the original values, divide by 100--except in NoData areas. For example, a raw value of 110922 becomes 1109.22.
