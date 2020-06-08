@@ -51,35 +51,35 @@ pro calculate_wBICa
   land_mask = 'V:\Australia\First Arrival\Masks\first_arrival_mask.mask.100.tif'
 
   fete_dirs = [$
-    'V:\Australia\First Arrival\female_unweighted_grid_50_20190525\', $
-    'V:\Australia\First Arrival\female_unweighted_coastline_to_grid_50_20190709\', $
-    'V:\Australia\First Arrival\female_unweighted_coastline_to_water_20191125\', $
-    'V:\Australia\First Arrival\female_unweighted_coastline_to_coastline_20190721\', $
-    'V:\Australia\First Arrival\female_unweighted_water_to_grid_50_20190726\', $
-    'V:\Australia\First Arrival\female_unweighted_water_to_water_20190710\', $
-    'V:\Australia\First Arrival\female_weighted_grid_50_20190525\', $
-    'V:\Australia\First Arrival\female_weighted_coastline_to_grid_50_20190705\', $
-    'V:\Australia\First Arrival\female_weighted_coastline_to_water_20190703\', $
-    'V:\Australia\First Arrival\female_weighted_coastline_to_coastline_20190722\', $
-    'V:\Australia\First Arrival\female_weighted_water_to_grid_50_20190727\', $
-    'V:\Australia\First Arrival\female_weighted_water_to_water_20190704\' $
+    'V:\Australia\First Arrival\female_unweighted_grid_50\', $
+    'V:\Australia\First Arrival\female_unweighted_coastline_to_grid_50\', $
+    'V:\Australia\First Arrival\female_unweighted_coastline_to_water\', $
+    'V:\Australia\First Arrival\female_unweighted_coastline_to_coastline\', $
+    'V:\Australia\First Arrival\female_unweighted_water_to_grid_50\', $
+    'V:\Australia\First Arrival\female_unweighted_water_to_water\', $
+    'V:\Australia\First Arrival\female_weighted_grid_50\', $
+    'V:\Australia\First Arrival\female_weighted_coastline_to_grid_50\', $
+    'V:\Australia\First Arrival\female_weighted_coastline_to_water\', $
+    'V:\Australia\First Arrival\female_weighted_coastline_to_coastline\', $
+    'V:\Australia\First Arrival\female_weighted_water_to_grid_50\', $
+    'V:\Australia\First Arrival\female_weighted_water_to_water\' $
     ]
 
   if include_river gt 0 then begin
     if include_river eq 1 then river_dirs = [$
-      'V:\Australia\First Arrival\female_river_weighted_grid_50_20190810\', $
-      'V:\Australia\First Arrival\female_river_weighted_coastline_to_grid_50_20191126\', $
-      'V:\Australia\First Arrival\female_river_weighted_coastline_to_water_20191128\', $
-      'V:\Australia\First Arrival\female_river_weighted_coastline_to_coastline_20191127\', $
-      'V:\Australia\First Arrival\female_river_weighted_water_to_grid_50_20191130\', $
-      'V:\Australia\First Arrival\female_river_weighted_water_to_water_20191202\' $
+      'V:\Australia\First Arrival\female_river_weighted_grid_50\', $
+      'V:\Australia\First Arrival\female_river_weighted_coastline_to_grid_50\', $
+      'V:\Australia\First Arrival\female_river_weighted_coastline_to_water\', $
+      'V:\Australia\First Arrival\female_river_weighted_coastline_to_coastline\', $
+      'V:\Australia\First Arrival\female_river_weighted_water_to_grid_50\', $
+      'V:\Australia\First Arrival\female_river_weighted_water_to_water\' $
       ] else if include_river eq 2 then river_dirs = [$
-      'V:\Australia\First Arrival\female_river_weighted_v2_grid_50_20191214\', $
-      'V:\Australia\First Arrival\female_river_weighted_v2_coastline_to_grid_50_20191214\', $
-      'V:\Australia\First Arrival\female_river_weighted_v2_coastline_to_water_20191217\', $
-      'V:\Australia\First Arrival\female_river_weighted_v2_coastline_to_coastline_20191215\', $
-      'V:\Australia\First Arrival\female_river_weighted_v2_water_to_grid_50_20191219\', $
-      'V:\Australia\First Arrival\female_river_weighted_v2_water_to_water_20191221\' $
+      'V:\Australia\First Arrival\female_river_weighted_grid_50\', $
+      'V:\Australia\First Arrival\female_river_weighted_coastline_to_grid_50\', $
+      'V:\Australia\First Arrival\female_river_weighted_coastline_to_water\', $
+      'V:\Australia\First Arrival\female_river_weighted_coastline_to_coastline5\', $
+      'V:\Australia\First Arrival\female_river_weighted_water_to_grid_50\', $
+      'V:\Australia\First Arrival\female_river_weighted_water_to_water\' $
       ]
     use_dirs = [fete_dirs,river_dirs]
     ncols = 3

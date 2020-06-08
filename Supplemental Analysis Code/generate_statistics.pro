@@ -195,7 +195,7 @@ function ripley_l, distances, search_radius, area
   ;lambda = dnels / area
   ;return, sqrt(((1.0d / lambda) * total((distances lt search_radius) / dnels)) / !dpi)
   
-  ;ESRI version, which they claim is commonly used
+  ;ESRI version, which they state is commonly used
   return,  sqrt((area * total(distances lt search_radius, /double)) / (!dpi * dnels * (dnels - 1)))
   
 end
@@ -379,7 +379,7 @@ pro generate_statistics, site_file, dem_file, dem_no_data, data_files, radius, i
         test_subset = ripley_sort[nremove:ntrials-nremove-1]
         empirical_test_min = min(test_subset, max=empirical_test_max)
 
-        ;using summary stats instead
+        ;summary stats method
         summary_test_prob = gauss_pdf((ripley_site_results[i] - ripley_step_mean[i])/ripley_step_std[i])
         
         ;just testing for clustering, not clustering or dispersion (simple difference from random) 
